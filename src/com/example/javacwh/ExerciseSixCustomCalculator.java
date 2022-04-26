@@ -2,7 +2,7 @@ package com.example.javacwh;
 
 import java.util.Scanner;
 
-/*class InvalidInputException extends Exception
+class InvalidInputException extends Exception
 {
     @Override
     public String toString()
@@ -12,7 +12,7 @@ import java.util.Scanner;
     @Override
     public String getMessage()
     {
-        return "Type first number then hit enter then type second number then hit enter";
+        return "Input can't have 8 or 9";
     }
 }
 
@@ -62,15 +62,17 @@ class CustomCalculator
         {
     int input1,input2;
 
-    public CustomCalculator(int input1, int input2) throws MaxInputException  {
+    public CustomCalculator(int input1, int input2) throws InvalidInputException,MaxInputException  {
        try
         {
+            if(input1==8||input1==9||input2==8||input2==9)
             throw new InvalidInputException();
         }
         catch(Exception e)
         {
             System.out.println(e);
             System.out.println(e.getMessage());
+            System.exit(1);
         }
 
 
@@ -82,6 +84,7 @@ class CustomCalculator
         {
             System.out.println(e);
             System.out.println(e.getMessage());
+            System.exit(1);
         }
 
         this.input1 = input1;
@@ -113,6 +116,7 @@ class CustomCalculator
             {
                 System.out.println(e);
                 System.out.println(e.getMessage());
+                System.exit(1);
             }
 
         int pdt=0;
@@ -129,6 +133,7 @@ class CustomCalculator
             {
                 System.out.println(e);
                 System.out.println(e.getMessage());
+                System.exit(1);
             }
         int div=0;
         div=input1/input2;
@@ -136,7 +141,7 @@ class CustomCalculator
     }
 }
 public class ExerciseSixCustomCalculator {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidInputException,MaxInputException,MaxMultiplierReachedException,DivideByZeroException{
 
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter two numbers : ");
@@ -162,4 +167,4 @@ public class ExerciseSixCustomCalculator {
 
     }
 }
-*/
+

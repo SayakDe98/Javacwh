@@ -1,8 +1,8 @@
 package com.example.javacwh;
-
+//arrays are called by reference because arrays are objects so the values of arrays actually change whereas data types like int ,float etc are called by value instead of call by reference so their values(arguments) are passed by values i.e. values are copied and the original values remain unchanged
 public class MethodOverloading {
- //arrays are called by reference because arrays are objects so the values of arrays actually change whereas data types like int ,float etc are called by value instead of call by reference so their values(arguments) are passed by values i.e. values are copied and the original values remain unchanged
-/*
+
+
     static int change(int a)//we can also use void return type then also the value wont change for a
     {
         a=90;
@@ -13,7 +13,7 @@ public class MethodOverloading {
     {
         arr[0]=102;
     }
-  */
+  //*/
     static void foo()
     {
         System.out.println("good morning bro!");
@@ -37,7 +37,8 @@ public class MethodOverloading {
         return 1;
     }
  public static void main(String[] args) {
-     /*   int a=11;
+   //  /*
+       int a=11;
         change(a);
         System.out.println(a);//this value remains same
 
@@ -45,7 +46,7 @@ public class MethodOverloading {
         changearr(arr);
         System.out.println(arr[0]);//this value changes cause array is object
 
-      */
+     // */
      foo();//we are not passing any arguments here
      foo(2,3);//we are passing arguments here
      foo(8,9,1);//we are passing more arguments here

@@ -1,6 +1,6 @@
 package com.example.javacwh;
 
-
+/*
 class Phone3
 {
     public void on()
@@ -86,3 +86,4 @@ public class PolymorphismInInterfaces  {
     }
 }
 
+*/
